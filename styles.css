@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.page {
+    min-height: 100vh;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.column-left {
+    background-image: url("https://qtire.com/wp-content/uploads/2018/11/service-400p-1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    flex: 40%;
+}
+.column-right {
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    flex: 60%;
+    background-color: white;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.content-container > div {
+    text-align: center;
+    font-size: 30px;
+    color: black;
+}
+.content-container > div:first-child {
+    margin-top: 30px;
+}
+
+.content-container > div:last-child {
+    margin-bottom: 10px;
+    box-shadow: 0 2px;
+}
+.logo {
+    width: 15%;
+    margin-right: 10px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.services-container > div {
+    width: 25%;
+    padding: .3rem;
+    border: 1px solid black;
+    margin: 1rem;
+    box-shadow: 3px 6px;
+}
+
+.services-container > div:hover {
+    cursor: pointer;
+    border: thin solid gray;
+    box-shadow: none;
+}
+
+.services-container  div > img {
+    width: 50%;
+}
+
+.services-container  div > p {
+    font-family: 'Montserrat', sans-serif;
+    margin: 5px;
+    color: black;
+    line-height: 1rem;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+    /* For mobile phones: */
+    .column-left {
+        background-image: url("https://cdnmedia.endeavorsuite.com/images/organizations/4c30f7cc-80ad-4d36-b89c-830dc8979d5e/tire%20repair%202.jpg?v=1473956880389");
+        min-height: 50vh;
+        background-size: cover;
+    }
+
+    .column-right{
+        margin-top: 10px;
+    }
+
+    [class*="column"] {
+        flex: 100%;
+    }
+    .content-container > div:first-child {
+        margin-top: 0;
+    }
+
+    .services-container > div {
+        width: 80%;
+    }
+    .services-container  div > p{
+        margin: 1rem;
+    }
+}
+
